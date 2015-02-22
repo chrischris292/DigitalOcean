@@ -1,28 +1,308 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Socket.IO Chat Example</title>
-  <link rel="stylesheet" href="style.css">
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+	<title>Christopher Chan | Computer Engineer</title>
+
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/set1.css" />
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <ul class="pages">
-    <li class="chat page">
-      <div class="chatArea">
-        <ul class="messages"></ul>
-      </div>
-      <input class="inputMessage" placeholder="Type here..."/>
-    </li>
-    <li class="login page">
-      <div class="form">
-        <h3 class="title">What's your nickname?</h3>
-        <input class="usernameInput" type="text" maxlength="14" />
-      </div>
-    </li>
-  </ul>
 
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/main.js"></script>
+	<div class = "introduction">
+    <div class = "headSection"></div>
+	       	<div class="topHeader">
+	          	<h1>CHRISTOPHER CHAN</h1>
+                <div class = "divider-large"></div>
+	          	<h3>COMPUTER ENGINEER & FULL-STACK WEB DEVELOPER</h3>
+	        </div>
+    </div>
+    <section class = "aboutMe">
+    <div class = "column full">
+    </div>
+    <div class = "row">
+    <div class = "column-third">
+        <img class = "me" src = "images/me.jpg">
+    </div>
+        <div class = "column-two-thirds">
+            <div id = "aboutTemp">
+                <h1>ABOUT</h1>
+                <div class = "divider"></div>
+                <h4>"Details Matter, it's worth waiting to get it right" - Steve Jobs</h4>
+            </div>
+            <div class = "description"><h4>I am a computer engineer from Seattle, currently studying at the University of Illinois at Urbana Champaign. I have worked in all levels of computer technology from analyzing signal processes in Linear Time Invarient systems and creating an Operating System virtually from scratch to full stack web development.
+            <br/>
+            <br/>
+    I am excited to be joining Goldman Sachs as a Summer Analyst for 2015.</h4></div>
+
+            </div>
+        </div>
+    </section>
+    <section class = "skills">
+    <h1>SKILLS</h1>
+    <div class = "divider"></div>
+
+        <div class = "container">
+            <div class = "column third-alt left">
+                <h3>
+                    COMPUTER ENGINEER 
+                </h3>
+                <div class = "divider-small"></div>
+                <i class = "flaticon flaticon-bulb11"></i>
+                <h4>
+                    Being a member of my high school's robotics club's Electrical Engineering division and an officer in my high school's computer club, I developed an interest in both robotics and programming.
+                </h4>
+                <h4>
+                    A few years later, I find myself drawn closer to the software side as I have begun to take more courses in topics such as Data Mining, Data Visualization, and Distributed Systems. 
+                </h4> 
+            </div>
+            <div class = "column third-alt middle">
+                <h3>
+                    WEB DEVELOPER
+                </h3>
+                <div class = "divider-small"></div>
+                 <i class = "flaticon flaticon-codings1"></i>
+                <h4>
+                    During the summer of my freshmen year in College, I sat in on a friend's web development course at the University of Washington. Within the span of an hour, I became hooked on web development and have been teaching myself various aspects of HTML/CSS/JS ever since. 
+                </h4>
+            </div>
+            <div class = "column third-alt right">
+                <h3>
+                    PROJECT MANAGER
+                </h3>
+                <div class = "divider-small"></div>
+
+                <i class = "flaticon flaticon-ruler9"></i>
+                <h4>
+                    As an eight year swimmer and water polo player, the concept of teamwork was instilled in me at a very young age. In high school, I was blessed with the oppurtunity to serve as a Treasurer, Vice President, and President of three different academia clubs. 
+                </h4>
+                <h4>
+                    In the professional environment, I executed the role of an Architect in an Agile methodology setting at AT&T.
+                </h4>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class = "workContainer">
+        <h1> EXPERIENCES</h1>
+        <div class = "divider"></div>
+
+            <div class = "clearfix container">
+            <div class = "timelineContainer">
+                <div class = "dot"></div>
+                    <div class = "work column half">
+                        <h2 class = "workTitle"> Goldman Sachs</h2>
+                        <h2> Summer Analyst Starting 2015 </h2>
+                        <h4>
+                        Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. The goal of the project was to make it easier and less time consuming to run load tests on the Appstore’s services. The load generation controller cordinates the deployment of AWS EC2 instances and starts and stops JMeter load tests on the hosts targeting Appstore endpoints.
+                        </h4>
+                    </div>
+                    <div class = "column half flow-opposite">
+                     <img class = "workLogo "src ="images/goldman.jpg">
+                    </div>
+                </div>
+
+                <div class = "timelineContainer">
+                <div class = "dot"></div>
+                    <div class = "work column half">
+                        <h2 class = "workTitle"> Undergraduate Researcher</h2>
+                        <h2> Labratory for Cosmology Data Mining </h2>
+                        <h4>
+                        Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. The goal of the project was to make it easier and less time consuming to run load tests on the Appstore’s services. The load generation controller cordinates the deployment of AWS EC2 instances and starts and stops JMeter load tests on the hosts targeting Appstore endpoints.
+                        </h4>
+                    </div>
+                    <div class = "column half flow-opposite">
+                     <img class = "workLogo "src ="images/uiuc.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class = "clearfix container">
+                <div class = "timelineContainer">
+                <div class = "dot"></div>
+                    <div class = "work column half">
+                        <h2 class = "workTitle"> Facebook Open Academy</h2>
+                        <h2> Prediction.IO Team Jan 2015 - May 2015 </h2>
+                        <h4>
+                        Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. The goal of the project was to make it easier and less time consuming to run load tests on the Appstore’s services. The load generation controller cordinates the deployment of AWS EC2 instances and starts and stops JMeter load tests on the hosts targeting Appstore endpoints.
+                        </h4>
+                    </div>
+                    <div class = "column half flow-opposite">
+                     <img class = "workLogo "src ="images/fb.png">
+                    </div>
+                </div>
+            </div>
+            <div class = "clearfix container">
+                <div class = "timelineContainer">
+                <div class = "dot"></div>
+                    <div class = "work column half">
+                        <h2 class = "workTitle"> AT&T</h2>
+                        <h2> Technical Intern </h2>
+                        <h4>
+                        Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. The goal of the project was to make it easier and less time consuming to run load tests on the Appstore’s services. The load generation controller cordinates the deployment of AWS EC2 instances and starts and stops JMeter load tests on the hosts targeting Appstore endpoints.
+                        </h4>
+                    </div>
+                    <div class = "column half flow-opposite">
+                     <img class = "workLogo "src ="images/att.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class = "clearfix container">
+                <div class = "timelineContainer">
+                <div class = "dot"></div>
+                    <div class = "work column half">
+                        <h2 class = "workTitle"> Dow Chemical</h2>
+                        <h2> Systems Engineer </h2>
+                        <h4>
+                        Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. The goal of the project was to make it easier and less time consuming to run load tests on the Appstore’s services. The load generation controller cordinates the deployment of AWS EC2 instances and starts and stops JMeter load tests on the hosts targeting Appstore endpoints.
+                        </h4>
+                    </div>
+                    <div class = "column half flow-opposite">
+                     <img class = "workLogo "src ="images/dow.jpg">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class = "projects">
+    <h1>PROJECTS</h1>
+    <div class = "divider"></div>
+    <div class="content">
+    <div class="grid">
+    <figure class="effect-sadie" id = "kam">
+            <img src="images/kam.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Football <span>Analytics</span></h2>
+                <p>A play by play analysis of the Seattle Seahawks<br>Node.js/MongoDB</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+    <figure class="effect-sadie" id = "ichiro">
+            <img src="images/ichiro.jpg" alt="img02" />
+            <figcaption>
+                <h2>Baseball <span>Sabermetrics</span></h2>
+                <p>A SQL Database of Baseball Data. <br>Data ranges from 1920's to 2012.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+    <figure class="effect-sadie" id = "banter">
+            <img src="images/banter.jpg" alt="img02" />
+            <figcaption>
+                <h2>Presenter<span>Feedback</span></h2>
+                <p>A hackathon project utilizing NLP during presentations. <br>AngularJS/Firebase</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+        <figure class = "descriptionBlock">
+            <div class = "descriptionDiv leftJust">
+                <h2>Show Me The <span>Money</span></h2>
+                <p>Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s 
+                </p>
+            </div>
+            <img src="images/stocks.jpg" alt="img02"/>
+    </figure>
+
+    <figure class="effect-sadie" id = "stocks">
+            <img src="images/stocks.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Show Me The <span>Money</span></h2>
+                <p>An award winning hackathon project. <br>Evaluates social media sentiment analysis trends<br> with trade volume of a stock.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+        <figure class="effect-sadie" id = "website">
+            <img src="images/sad.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Krestofur <span>1.0</span></h2>
+                <p>My older portfolio<br/> based off of a flat design.<br/></p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+        <figure class="effect-sadie" id = "bus">
+            <img src="images/bus.jpg" alt="img02"/>
+            <figcaption>
+                <h2>CUMTD <span>Buses</span></h2>
+                <p>An improved version of CUMTD's web interface. <br>Javascript.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+    </figure>
+        <figure class="effect-sadie" id = "academia">
+            <img src="images/library.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Academia <span>Trends</span></h2>
+                <p>Evaluates the consistency of publications across majors. <br>NLTK.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+        <figure class = "descriptionBlock">
+            <div class = "descriptionDiv rightJust">
+                <h2 >Show Me The <span>Money</span></h2>
+                <p >Engineer on the AWS Appstore Ordering team, which is responsible for fulfilling app orders, subscriptions and in app purchases. Created an internal Rails website and load generation controller to test the Appstore’s backend services at higher load levels. 
+                </p>
+            </div>
+
+            <img src="images/ichiro.jpg" alt="img02"/>
+    </figure>
+
+    </figure>
+        <figure class="effect-sadie" id = "fill2">
+            <img src="images/mac.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Spike <span>OS</span></h2>
+                <p>Created a fully equiped Linux OS from scratch. <br>1.5 month project with team of 4.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+    </figure>
+        <figure class="effect-sadie" id = "fill3">
+            <img src="images/kam.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Football <span>Analytics</span></h2>
+                <p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+    </figure>
+        <figure class="effect-sadie">
+            <img src="images/ichiro.jpg" alt="img02"/>
+            <figcaption>
+                <h2>Football <span>Analytics</span></h2>
+                <p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
+                <a href="#">View more</a>
+            </figcaption>           
+    </figure>
+
+    </div>
+    </div>
+
+</div>
+    </section>
+    <section class = "footer">
+    <h1>
+    CONTACT
+    </h1>
+    <div class = "divider"></div>
+    <div class = "footerIcons">
+       <a href = "www.github.com/chrischris292"> <i class = "flaticon flaticon-github17"></i></a>
+        <a href="mailto:cbchan2@illinois.edu?subject=Resume Request"><i class = "flaticon flaticon-new100"></i></a>
+
+    </div>
+
+    <h3>2015 Christopher Chan. Released under Don't Be a Dick Public License</h3>
+    </section>
 </body>
 </html>

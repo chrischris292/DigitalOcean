@@ -2,7 +2,6 @@
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var io = require('../..')(server);
 var port = process.env.PORT || 3000;
 
 server.listen(port,"162.243.141.138", function () {

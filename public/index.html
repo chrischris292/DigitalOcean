@@ -2,311 +2,74 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-	<title>Christopher Chan | Computer Engineer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Academic Research Paper Data Visualization</title>
+    <meta name="description" content="A CS 467 Final Project Visualizing Academic Research Papers">
 
-	<!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/set1.css" />
+       <link rel="stylesheet" href="fonts/gotham.css" type="text/css">
 
-    <!-- Google Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="sss/sss.css" type="text/css">
+
 </head>
 <body>
-
-	<div class = "introduction">
-	       	<div class="topHeader">
-	          	<h1>CHRISTOPHER CHAN</h1>
-                <div class = "divider-large"></div>
-	          	<h3>COMPUTER ENGINEER & FULL-STACK WEB DEVELOPER</h3>
-	        </div>
+<div class = "headerContainer">
+    <div class = "container">
+        <h1>Texting Visualization</h1>
+        <line></line>
+        <div id = "subTitle" >In 2013-2014 I most frequently mispelled: <span id="rotate-word">awesome</span></div>
+        <div class = "authors"> Christopher Chan</div>
+        <div class = "date">CS 467- Social Visualization</div>
     </div>
-    <section class = "aboutMe">
-    <div class = "column full">
-    </div>
-    <div class = "row">
-    <div class = "column-third">
-        <img class = "me" src = "images/me.jpg">
-    </div>
-        <div class = "column-two-thirds">
-            <div id = "aboutTemp">
-                <h1>ABOUT</h1>
-                <div class = "divider"></div>
-                <h4>"Details Matter, it's worth waiting to get it right" - Steve Jobs</h4>
-            </div>
-            <div class = "description"><h4>I am a computer engineer from Seattle, currently studying at the University of Illinois at Urbana Champaign. I have worked in all levels of computer technology from analyzing signal processes in Linear Time Invarient systems and creating an Operating System virtually from scratch to full stack web development.
-            <br/>
-            <br/>
-    I am excited to be joining Goldman Sachs as a Summer Analyst for 2015.</h4></div>
+</div>
+<div class = "container">
+    <h1>Introduction</h1>
+    <line class = "other"></line>
+    <p>    
+            Utilizing a variety of libraries including sentiment, fast-csv, jquery,spellchecker,express, and moment, I analyzed 15MB of text messages over a 2 year span. For privacy, I have just saved the cached results instead of the entire log. I had many issues using node.js with such a large data set and had to carefully watch my memory usage throughout the process. 
+    </p>
 
-            </div>
-        </div>
-    </section>
-    <section class = "skills">
-    <h1>SKILLS</h1>
-    <div class = "divider"></div>
+    <h1>How do I communicate in group chat? </h1>
+    <line class = "other"></line>
+    <p>    
+        This visualization represents the group chat relationships between the four members. I counted the amount of occurances of each member's name to compare who's name is mentioned the most and the relationships among each member. Orange Represents Wilbert, black represents David, yellow represents Linsen, brown represents Chris. 
+    </p>
+    <div id = "chordChart"></div>
 
-        <div class = "container">
-            <div class = "column third-alt left">
-                <h3>
-                    COMPUTER ENGINEER 
-                </h3>
-                <div class = "divider-small"></div>
-                <i class = "flaticon flaticon-bulb11"></i>
-                <h4>
-                    Being a member of my high school's robotics club's Electrical Engineering division and an officer in my high school's computer club, I developed an interest in both robotics and programming.
-                </h4>
-                <h4>
-                    A few years later, I find myself drawn closer to the software side as I have begun to take more courses in topics such as Data Mining, Data Visualization, and Distributed Systems. 
-                </h4> 
-            </div>
-            <div class = "column third-alt middle">
-                <h3>
-                    WEB DEVELOPER
-                </h3>
-                <div class = "divider-small"></div>
-                 <i class = "flaticon flaticon-codings1"></i>
-                <h4>
-                    During the summer of my freshmen year in College, I sat in on a friend's web development course at the University of Washington. Within the span of an hour, I became hooked on web development and have been teaching myself various aspects of HTML/CSS/JS ever since. 
-                </h4>
-            </div>
-            <div class = "column third-alt right">
-                <h3>
-                    PROJECT MANAGER
-                </h3>
-                <div class = "divider-small"></div>
+    <h1> Do I text differently at different hours during the day? </h1>
+    <line class = "other"></line>
+    <p>    
+        This visualization represents the differences in how I text at each hour. First visualization represents the overall average sentiment at each hour. Second visualization represents who I tend to message the most at each hour. 
+    </p>
+    <div id = "lineChart"></div>
 
-                <i class = "flaticon flaticon-ruler9"></i>
-                <h4>
-                    As an eight year swimmer and water polo player, the concept of teamwork was instilled in me at a very young age. In high school, I was blessed with the oppurtunity to serve as a Treasurer, Vice President, and President of three different academia clubs. 
-                </h4>
-                <h4>
-                    In the professional environment, I executed the role of an Architect in an Agile methodology setting at AT&T.
-                </h4>
-            </div>
-        </div>
-    </section>
+    <p>
+            This visualization represents the differences in how I text at each hour. First visualization represents the overall average sentiment at each hour. Second visualization represents who I tend to message the most at each hour. 
+    </p>
+    <div id = "pieChart"></div>
 
-    <section>
-        <div class = "workContainer">
-        <h1> EXPERIENCES</h1>
-        <div class = "divider"></div>
-
-            <div class = "clearfix container">
-            <div class = "timelineContainer">
-                <div class = "dot"></div>
-                    <div class = "work column half">
-                        <h2 class = "workTitle"> Goldman Sachs</h2>
-                        <h2> Summer Analyst Starting 2015 </h2>
-                        <h4>
-                        I am excited for the opportunity an engineer on the Symphony communications platform team in New York. <br/>Darren Cohen, global co-head of principal strategic investments at Goldman Sachs describes the platform as "the core nervous system of the financial markets."
-                        </h4>
-                    </div>
-                    <div class = "column half flow-opposite">
-                     <img class = "workLogo "src ="images/goldman.jpg">
-                    </div>
-                </div>
-
-                <div class = "timelineContainer">
-                <div class = "dot"></div>
-                    <div class = "work column half">
-                        <h2 class = "workTitle"> Undergraduate Researcher</h2>
-                        <h2> Lab. for Cosmology Data Mining 2015</h2>
-                        <h4>
-                        Today, the most accurate mock galaxy catalogs are created with computationally intensive large-volume simulations utilizing N-Body and hydrodynamics.<br/> As an undergraduate researcher, I am investigating alternatives to salvaging precise measurements utilizing machine learning algorithms, feature selection, and ensemble methods.  
-                        </h4>
-                    </div>
-                    <div class = "column half flow-opposite">
-                     <img class = "workLogo "src ="images/uiuc.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class = "clearfix container">
-                <div class = "timelineContainer">
-                <div class = "dot"></div>
-                    <div class = "work column half">
-                        <h2 class = "workTitle"> Facebook Open Academy</h2>
-                        <h2> Prediction.IO Team Jan 2015 - May 2015 </h2>
-                        <h4>
-                        One of seven students and only ECE student selected to participate in program run by Facebook where students work with open source groups through a semester. <br/>
-                        Currently in the process of building a custom PredictionIO engine template (Scala) that integrates Apache OpenNLP library.
-                        </h4>
-                    </div>
-                    <div class = "column half flow-opposite">
-                     <img class = "workLogo "src ="images/fb.png">
-                    </div>
-                </div>
-            </div>
-            <div class = "clearfix container">
-                <div class = "timelineContainer">
-                <div class = "dot"></div>
-                    <div class = "work column half">
-                        <h2 class = "workTitle"> AT&T </h2>
-                        <h2> Technical Intern Summer 2014</h2>
-                        <h4>
-                        I served the role of an Architect in an Agile Scrum setting for an summer-long intern coding project. Selected to present the application to the Vice President of Technology. <br/>
-                        As an Intern I worked with engineering and project manager teams on the development of the AT&T Gigapower Website.
-                        </h4>
-                    </div>
-                    <div class = "column half flow-opposite">
-                     <img class = "workLogo "src ="images/att.jpg">
-                    </div>
-                </div>
-            </div>
-
-            <div class = "clearfix container">
-                <div class = "timelineContainer">
-                <div class = "dot"></div>
-                    <div class = "work column half">
-                        <h2 class = "workTitle"> Dow Chemical </h2>
-                        <h2> Systems Engineer 2013-2014</h2>
-                        <h4>
-                        As a Systems Engineer, I worked on a two man team and designed/developed a new navigation scheme for the Exposure Vision project utilized by scientists around the world. I worked on both front-end and back-end portions of code for the project. 
-                        </h4>
-                    </div>
-                    <div class = "column half flow-opposite">
-                     <img class = "workLogo "src ="images/dow.jpg">
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-    </section>
-    <section class = "projects">
-    <h1>PROJECTS</h1>
-    <div class = "divider"></div>
-    <div class="content">
-    <div class="grid">
-    <figure class="effect-sadie" id = "kam">
-            <img src="images/kam.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Football <span>Analytics</span></h2>
-                <p>A play by play analysis of the Seattle Seahawks<br>Node.js/MongoDB</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-    <figure class="effect-sadie" id = "stocks">
-            <img src="images/stocks.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Show Me The <span>Money</span></h2>
-                <p>An award winning hackathon project. <br>Evaluates social media sentiment analysis trends<br> with trade volume of a stock.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-
-    <figure class="effect-sadie" id = "banter">
-            <img src="images/banter.jpg" alt="img02" />
-            <figcaption>
-                <h2>Presenter<span>Feedback</span></h2>
-                <p>A hackathon project utilizing NLP during presentations. <br>AngularJS/Firebase</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-        <figure class = "descriptionBlock">
-            <div class = "descriptionDiv leftJust">
-                <h2>Industry <span>Exposure</span></h2>
-                <p> I have had the oppurtunity to meet with some amazing people, regarding my personal projects, from employees at companies like Facebook, Bloomberg, and Goldman Sachs to technology executives of the Seattle Seahawks and the National Football League. 
-                </p>
-            </div>
-            <img src="images/stocks.jpg" alt="img02"/>
-    </figure>
-
-
-        <figure class="effect-sadie" id = "website">
-            <img src="images/sad.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Krestofur <span>1.0</span></h2>
-                <p>My older portfolio<br/> based off of a flat design.<br/></p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-        <figure class="effect-sadie" id = "bus">
-            <img src="images/bus.jpg" alt="img02"/>
-            <figcaption>
-                <h2>CUMTD <span>Buses</span></h2>
-                <p>An improved version of CUMTD's web interface. <br>Javascript.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-    </figure>
-    <figure class="effect-sadie" id = "academia">
-            <img src="images/library.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Academia <span>Trends</span></h2>
-                <p>Evaluates the consistency of publications across majors. <br>NLTK.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-
-    </figure>
-    <figure class="effect-sadie" id = "fill2">
-            <img src="images/mac.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Spike <span>OS</span></h2>
-                <p>Created a fully equiped Linux OS from scratch. <br>1.5 month project with team of 4.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-    <figure class = "descriptionBlock">
-            <div class = "descriptionDiv rightJust">
-                <h2 >Critical <span>Questions</span></h2>
-                <p > "Why is this important?" I ask myself this every day with anything I do. It is the foundamental core of anything I create. I strive to design usable applications that solve real world problems. 
-                </p>
-            </div>
-
-            <img src="images/ichiro.jpg" alt="img02"/>
-    </figure>
-    <figure class="effect-sadie" id = "ichiro">
-            <img src="images/ichiro.jpg" alt="img02" />
-            <figcaption>
-                <h2>Baseball <span>Sabermetrics</span></h2>
-                <p>A SQL Database of Baseball Data. <br>Data ranges from 1920's to 2012.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-
-    </figure>
-        <figure class="effect-sadie" id = "fill3">
-            <img src="images/kam.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Football <span>Analytics</span></h2>
-                <p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-    </figure>
-        <figure class="effect-sadie">
-            <img src="images/car.jpg" alt="img02"/>
-            <figcaption>
-                <h2>Autonomous <span>Car</span></h2>
-                <p>Utilizing only TTL chips <br>designed/implemented a simple self driving car.</p>
-                <a href="#">View more</a>
-            </figcaption>           
-    </figure>
-
-    </div>
-    </div>
+    <h1> What do I say the most? </h1>
+    <line class = "other"></line>
+    <p>    
+        This visualization represents the differences in how I text at each hour. First visualization represents the overall average sentiment at each hour. Second visualization represents who I tend to message the most at each hour. 
+    </p>
+    <div id = "wordChart"></div>
 
 </div>
-    </section>
-    <section class = "footer">
-    <h1>
-    CONTACT
-    </h1>
-    <div class = "divider"></div>
-    <div class = "footerIcons">
-       <a href = "www.github.com/chrischris292"> <i class = "flaticon flaticon-github17"></i></a>
-        <a href="mailto:cbchan2@illinois.edu?subject=Resume Request"><i class = "flaticon flaticon-new100"></i></a>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src = "scripts/moment.js"></script>
+<script src = "scripts/d3.layout.cloud.js"></script>
 
-    </div>
+<script src = "scripts/dimple.latest.min.js"></script>
+<script src = "scripts/jquery.js"></script>
+<script src = "sss/sss.min.js"></script>
 
-    <h3>2015 Christopher Chan. Released under Don't Be a Dick Public License</h3>
-    </section>
+<script src = "scripts/papaparse.min.js"></script>
+<script src = "scripts/main.js"></script>
+<script src = "scripts/moment.js"></script>
+
 </body>
-</html>
+
